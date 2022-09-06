@@ -1,4 +1,5 @@
 pythagorean theorem | a2 + b2 = c2
-area of triangle | (1/2) × base × height
+area of a triangle | (1/2) × base × height
 quadratic equation | ax^2 + bx + c = 0
 quadratic | x = [-b ± (√b2 - 4ac)] / 2a
+area of a circle | (A = π r²)
