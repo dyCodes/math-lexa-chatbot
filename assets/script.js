@@ -5,8 +5,7 @@ $(document).ready(function () {
     var user_message = $("input#message").val();
 
     if (user_message != '') {
-      $('div.chat')
-        .append('<div class="user-box"><div class="user"><p>' + user_message + '</p></div></div>');
+      $('div.chat').append('<div class="user-box"><div class="user"><p>' + user_message + '</p></div></div>');
 
       $.ajax({
         type: "POST",
@@ -17,8 +16,10 @@ $(document).ready(function () {
         cache: false,
         success: function (data) {
           $("div.chat").append('<div class="chat-box"><div class="chat-box-image"><img src="./assets/images/lexa_2.png" alt="" /></div><div class="chat-box-inner-text"><p>' + data + '</p></div></div>');
+
           // Scroll to reply
-          document.querySelector(".chat").scrollTo(0, document.querySelector(".chat").scrollHeight);
+          $(".chat").scrollTop($(".chat")[0].scrollHeight);
+
           // Clear input
           $("input#message").val("");
         }
