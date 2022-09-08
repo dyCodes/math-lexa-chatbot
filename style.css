@@ -24,7 +24,7 @@ body {
   align-items: center;
   height: 100vh;
   color: var(--text-color);
-  background-image: url("./images/chat-bg.png");
+  background-image: url("./assets/images/chat-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -78,7 +78,7 @@ div.chat-title > p {
   display: flex;
   align-items: center;
   gap: 10px;
-  animation: slideinRight 1s linear;
+  animation: slideinRight 0.6s linear;
 }
 
 .chat-box-image {
@@ -92,6 +92,7 @@ div.chat-title > p {
   background-color: #323232;
   padding: 1rem 1.4rem;
   border-radius: 40px 40px 40px 0;
+  margin-bottom: 1.1rem;
 }
 
 @keyframes slideinRight {
@@ -110,7 +111,7 @@ div.chat-title > p {
   max-width: 200px;
 }
 
-.chat-input {
+.chat-input > .chat-form {
   display: grid;
   grid-template-columns: 1fr;
   gap: 4px;
@@ -126,9 +127,8 @@ div.chat-title > p {
   background: var(--user-background);
   padding: 1rem 1.4rem;
   border-radius: 40px 40px 0 40px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  animation: slideinLeft 1s linear;
+  margin-bottom: 1.1rem;
+  animation: slideinLeft 0.6s linear;
 }
 @keyframes slideinLeft {
   from {
@@ -157,7 +157,6 @@ input {
 input::placeholder {
   color: var(--text-color);
 }
-
 button {
   border: none;
   outline: none;
@@ -165,8 +164,8 @@ button {
   padding: 10px 18px;
   font-size: 1.8rem;
   color: var(--text-color);
-  opacity: 0;
   cursor: pointer;
+  opacity: 0;
 }
 
 input:valid ~ button {
@@ -174,7 +173,7 @@ input:valid ~ button {
   pointer-events: auto;
 }
 
-::-webkit-scrollbar {
+scrollbar {
   width: 4px;
 }
 
